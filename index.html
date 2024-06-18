@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Notes App</title>
+
+    <!-- Favicons -->
+  </head>
+  <body>
+    <header>
+      <app-bar></app-bar>
+    </header>
+    <main>
+      <div class="container">
+        <!-- section notes -->
+        <section id="all-notes" class="all-notes">
+          <!-- title list -->
+          <div class="title-section">
+            <h2>All Notes</h2>
+          </div>
+          <!-- main list -->
+          <div class="notes-details">
+            <!-- head list -->
+            <div class="notes-amount">
+              <div class="amount">Jumlah Buku</div>
+              <div class="icon-section">
+                <a class="icon">+</a>
+              </div>
+            </div>
+            <!-- list dari kontent -->
+            <div class="list-notes">
+              <list-notes></list-notes>
+            </div>
+          </div>
+        </section>
+
+        <section id="form-notes" class="form-notes">
+          <form action="" id="form">
+            <div class="form-group title-form">
+              <label for="title">Judul Catatan</label>
+              <input
+                nama="title"
+                type="text"
+                id="title"
+                placeholder="Tuliskan Judul Catatan Anda..."
+                aria-describedby="usernameValidation2"
+              />
+              <p
+                id="titleValidation"
+                class="validation-message"
+                aria-live="polite"
+              ></p>
+            </div>
+            <div class="form-group">
+              <label for="deskripsi">Isi Catatan</label>
+              <textarea
+                name="deskripsi"
+                id="deskripsi"
+                placeholder="Tuliskan Isi dari Catatan Anda...."
+              ></textarea>
+              <p
+                id="bodyValidation"
+                class="validation-message"
+                aria-live="polite"
+              ></p>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" id="btn-submit">
+                <span class="btn-text">Submit</span>
+                <div class="btn-loading">Loading...</div>
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <close-app></close-app>
+    </footer>
+  </body>
+</html>
